@@ -1,0 +1,32 @@
+<header class="fixed-top">
+    <nav class="navbar navbar-expand-md bg-white">
+      <div class="container-fluid">
+        <a class="navbar-brand ms-0 ms-md-5 ms-auto d-flex align-items-center gap-3">
+          
+            <h1 class="fs-3">Pets PI</h1>
+        </a>
+        <button (click)="isCollapse = !isCollapse" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div [collapse]="isCollapse" [isAnimated]="true" class="collapse navbar-collapse" id="navbarCollapse">
+          <form class="d-flex ms-auto mt-4 mt-md-0 me-md-5" role="search">
+            <input class="form-control - lg border -1 border-black" type="search" placeholder="Pesquisar" aria-label="Search">
+          </form>
+        </div>
+      </div>
+    </nav>
+    <ul class="menu m-0 py-3 list-unstyled d-flex justify-content-around flex-wrap fs-5 gap-4 gap-sm-0">
+        <li>
+            <a routerLink="/todos" routerLinkActive="active">todos</a>
+        </li>
+        <li>
+            <a routerLink="/dogs"  routerLinkActive="active">cachorros</a>
+        </li>
+        <li>
+            <a routerLink="/cats"  routerLinkActive="active">gatos</a>
+        </li>
+        <li>
+            <a routerLink="/cats-dogs"  routerLinkActive="active">gatos e cachorros</a>
+        </li>
+    </ul>
+  </header>
