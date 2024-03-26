@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
 
   public isCollapse = false;
+    
+  }
 
-}
+

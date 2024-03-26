@@ -1,3 +1,4 @@
+
 $link-active: #0c185f;
 
 .menu {
@@ -5,11 +6,12 @@ $link-active: #0c185f;
 
   & li > a {
     text-decoration: none;
+    color: white;
     padding: 0.5rem;
     border-radius: 0.5rem;
 
     &.active {
-      background-color: lighten($link-active,15);
+      background-color: lighten($link-active, 15);
     }
   }
 }
