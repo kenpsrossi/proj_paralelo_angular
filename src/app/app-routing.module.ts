@@ -3,9 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { AnimaisComponent } from './components/animais/animais.component';
 
 const routes: Routes = [
-  {
-    path: '', pathMatch: 'full', redirectTo: 'todos',
-  },
+  //{
+    //path: '', pathMatch: 'full', redirectTo: 'todos',
+  //},
   {
     path: 'todos', component: AnimaisComponent
   },

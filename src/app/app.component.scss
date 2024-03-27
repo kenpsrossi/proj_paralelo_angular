@@ -1,16 +1,27 @@
-.app-carousel {
+/* Estilos para imagens do carrossel */
+.carousel-image {
+    display: block;
+    width: 100%;
+}
 
+/* Estilos para o carrossel da aplicação */
+.app-carousel {
     slide {
+        /* Estilos para imagens dentro de um slide */
         & img {
             width: 100%;
-            max-height: 600px;
             min-height: 400px;
+            max-height: 600px;
+            /* Ajusta a imagem para preencher o contêiner mantendo a proporção */
             object-fit: cover;
+            /* Alinha a imagem ao topo e à esquerda */
             object-position: top left;
         }
     }
 }
 
+/* Estilos para o rodapé */
 footer {
+    /* Usa a cor secundária como cor de fundo */
     background-color: var(--secondary-color);
 }

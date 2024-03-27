@@ -1,29 +1,36 @@
 <div class="app">
+  <!-- Componente Navbar -->
   <app-navbar></app-navbar>
 
+  <!-- Componente Carousel -->
   <div class="app-carousel">
     <carousel [isAnimated]="true" [interval]="slideInterval" [(activeSlide)]="activeSlideIndex">
+      <!-- Usando *ngFor para iterar sobre as slides -->
       <slide *ngFor="let slide of slides; let index=index">
-        <img [src]="slide.image" alt="image slide" style="display: block; width: 100%;">
-     
+        <!-- Imagem do Carousel com texto alternativo descritivo -->
+        <img [src]="slide.image" alt="Imagem de {{ slide.text }}" class="carousel-image">
         <div class="carousel-caption">
+          <!-- Texto da slide -->
           <h4>{{ slide.text }}</h4>
-          
         </div>
       </slide>
     </carousel>
   </div>
 
-  <main class="p-5 d-flex flex-colum gap-3">
-    <h1 class="text-center fw-medium text-primary">{{ pageCurrentTitle }}</h1>
-    <router-outlet></router-outlet>
+  <!-- Título da página atual -->
+  <h2 class="text-center fw-medium text-primary">{{ pageCurrentTitle }}</h2>
 
-  </main>
+  <div>
+    <!-- Área de conteúdo principal -->
+    <main class="p-5 d-flex flex-colum gap-3">
+      <!-- Ponto de saída do roteador para exibir componentes roteados -->
+      <router-outlet></router-outlet>
+    </main>
 
-
-  <footer class="text-center py-3 text-black">
-    <span> Criado por PI-1 007 013 </span>
-  </footer>
+    <!-- Rodapé -->
+    <footer class="text-center py-3 text-black">
+      <!-- Texto do rodapé -->
+      <span> Criado por PI-1 007 013 </span>
+    </footer>
+  </div>
 </div>
-
-

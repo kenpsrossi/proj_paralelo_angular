@@ -5,5 +5,7 @@ export interface Pet {
     image?: string;
     name: string;
     color:  string;
-    sex: 'Masculino' | 'Femnino';
+    sex: 'Macho' | 'Fêmea';
+    port: 'Pequeno' | 'Médio' | 'Grande';
+    idade: number;
 }

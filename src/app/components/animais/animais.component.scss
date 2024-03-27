@@ -1,3 +1,9 @@
+/* Define z-index values */
+$z-index-wrapper: 10;
+
+/* Define colors */
+$color-wrapper-bg: #6562629c;
+
 .animal-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -7,6 +13,7 @@
   .animal-image {
     position: relative;
 
+    /* Show the animal wrapper on hover */
     &:hover {
       .animal-wrapper {
         display: block;
@@ -17,11 +24,11 @@
   .animal-wrapper {
     display: none;
     position: absolute;
-    background-color: #6562629c;
+    background-color: $color-wrapper-bg;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 999;
+    z-index: $z-index-wrapper;
   }
 }
